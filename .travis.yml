@@ -1,13 +1,10 @@
 language: php
 
 php:
-  - 5.3
-  - 5.4
   - 5.5
   - 5.6
   - 7.0
   - hhvm
-  - nightly
 
 env:
   - WP_VERSION=latest WP_MULTISITE=0
@@ -19,7 +16,3 @@ before_script:
   - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
 
 script: phpunit
-
-notifications:
-  slack:
-    secure: DGc3txjbx7NfraAnVuhAhYARdRUgl4bfSd/E2ccvLfeyLNmyW6NdnD4jk8Cn6HY6OX9NFRbZK1KgyaOBnRwVJUnPplmsuqQHuzzjRBsCeJwPM7u5ZrGb7CG6PyqjrLkmTXK6r1QH6y49WH7RCYF+dek75hHLQlAyHR0iE+yXbTqL8avil/aksvLQTv92bSdYnwWtqbib99ekKAzOzTXJIKBfRBqM87Rlsshm5OQTRbHGpoXCOQGMNgqT972CiWCxHkg2Nk8rqqfFxVTivlJxhm/6jspco/2LvatvCzkcRVU1NQ+K0syyV36TIkVD/3mvoDf4VkcowFugrMIfHYk9YHT/l6kSG3v10koa3nEfIReomGn2H7wNGqBMrf/uhRKhrw7qXAau8PlnTkZCpkxNd9VmPUjeH8iEcyM2G/Z6fRH8HLtgDzUskLTScDusbQ3+MTyBAgq+OiaEPSPAi4gGgBknzJJ+G+WO41IjelhFUZESrz4lDd0XqCuAvDkj11aFD80MvlaU8M7x1TCIMWn7sGZ4n3lCFXnxCOVF0JOm34MXd80Yn/kI+3TBGLT3FFbq34AFxiBldka+d5PHK8iwI1TQXxXpNVsgktPeCnQ/BvQBvx249v9JXugE19kxLleGzICFkKm4ipLtUkGjS0FIQTzjmhGSFlx8Hg3WpLeW3OU=
